@@ -1,9 +1,9 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "ALC Translator",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.io",
-  "homepage_url": "http://extensionizr.com",
+  "description": "Translate Alc Web into English",
+  "homepage_url": "http://github.com/shirakia/alc_translater",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -15,14 +15,19 @@
     "default_title": "page action demo",
     "default_popup": "src/page_action/page_action.html"
   },
+  "permissions": [
+      "http://eowp.alc.co.jp/*"
+  ],
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "http://eowp.alc.co.jp/*"
       ],
       "js": [
+        "js/jquery/jquery.min.js",
         "src/inject/inject.js"
-      ]
+      ],
+      "run_at": "document_end"
     }
   ]
 }
