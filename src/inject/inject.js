@@ -35,6 +35,11 @@ replace_text($('#leftbar .history .top').eq(0), /検索履歴/g, 'Search History
 replace_text($('#leftbar .history .top').eq(1), /単語帳登録履歴/g, 'Wordbook History');
 replace_text($('#leftbar .history .middlemain .readmore'), /すべてを見る/g, 'more');
 
+// footer
+replace_text($('#footermenu'), 'プライバシーポリシー', 'Privacy Policy');
+replace_text($('#footermenu'), '利用規約', 'Terms');
+replace_text($('#footermenu'), '会社案内', 'About Us');
+
 function replace_text(dom_name, sub_str, new_sub_str) {
   var new_html = dom_name.html().replace(sub_str, new_sub_str);
   dom_name.html(new_html);
