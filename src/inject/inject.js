@@ -21,6 +21,15 @@ replace_text($('form#fm1'), ' あいまい検索', ' Fuzzy Search');
 
 replace_text($('#js_open_cond'), '条件を詳細に指定して検索', 'Advanced Search');
 
+// search results area
+replace_text($('#title .title'), '検索文字列', 'Search Query');
+replace_text($('#title .paging'), '該当件数 : ', '');
+replace_text($('#title .paging'), '件', 'results');
+
+replace_text($('#resultlist .totop'), 'ページトップへ', 'Back to Top');
+replace_text($('#resultfooter .paging'), '該当件数 : ', '');
+replace_text($('#resultfooter .paging'), '件', 'results');
+
 // sidebar
 replace_text($('#leftbar .history .top').eq(0), /検索履歴/g, 'Search History');
 replace_text($('#leftbar .history .top').eq(1), /単語帳登録履歴/g, 'Wordbook History');
